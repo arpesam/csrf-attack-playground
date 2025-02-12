@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <form action="http://localhost:8080/protected-resource" method="GET">
+    <!-- <input type="hidden" name="course" value="2698"> -->
+    <!-- <input type="hidden" name="format" value="csv"> -->
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    function onSubmit() {
+      console.log("Form is being submitted");
+    }
+    document.forms[0].addEventListener('submit', onSubmit);
+  </script>
+
+</body>
+</html>
