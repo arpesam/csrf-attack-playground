@@ -38,6 +38,7 @@ This project is meant for **educational purposes only** and should not be used f
 ### **Prerequisites**
 - Go installed on your system.
 - A modern web browser to test the simulation.
+- ngrok to run https locally in the webserver
 
 ### **Steps to Run**
 
@@ -59,7 +60,7 @@ go run main.go
 
 #### **4. Simulate the CSRF Attack**
 1. Open the `csrf.html` file in a browser (e.g., by double-clicking it).
-2. Observe that the attacker page automatically submits a request to `http://localhost:8080/protected-resource`.
+2. Observe that the attacker page automatically submits a request to `https://<NGROK_URL>:8080/protected-resource`.
 3. The server processes the request as if it were made by the victim, demonstrating the CSRF vulnerability.
 
 ---
@@ -67,7 +68,7 @@ go run main.go
 ## **Example Walkthrough**
 
 ### **Legitimate Use Case**
-1. Open the web server at `http://localhost:8080`.
+1. Open the web server at `https://<NGROK_URL>::8080`.
 2. Visit `/set` to set the cookie.
 3. Visit `/protected-resource` to verify access to the protected resource.
 
